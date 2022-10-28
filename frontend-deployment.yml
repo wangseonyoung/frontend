@@ -16,7 +16,7 @@ spec:
      labels:
       type: web
       app: frontend
-      version: v19
+      version: v20
    spec:
     containers:
     - name: frontend
