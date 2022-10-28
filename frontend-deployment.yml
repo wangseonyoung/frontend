@@ -2,19 +2,25 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
  name: frontend-deployment
+ labels:
+  type: web
+  app: frontend
 spec:
  selector:
    matchLabels:
-    type: frontend
+    type: web
+    app: frontend
  replicas: 1
  template:
    metadata:
      labels:
-       type: frontend
+      type: web
+      app: frontend
+      version: v11
    spec:
     containers:
     - name: frontend
-      image: seonyoung1227/frontend:latest
+      image: seonyoung1227/frontend:11
       envFrom:
       ports:
       - containerPort: 80
