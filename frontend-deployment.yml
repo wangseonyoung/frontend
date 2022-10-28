@@ -20,7 +20,7 @@ spec:
    spec:
     containers:
     - name: frontend
-      image: seonyoung1227/frontend:11
+      image: seonyoung1227/frontend:latest
       envFrom:
       ports:
       - containerPort: 80
